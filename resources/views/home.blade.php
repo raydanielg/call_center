@@ -1,23 +1,12 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
+@section('title', 'Redirecting...')
+@section('page_title', 'Redirecting...')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
+<div class="flex items-center justify-center min-h-[60vh]">
+    <div class="text-center">
+        <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-primary-200 border-t-primary-600 mb-4"></div>
+        <p class="text-sm text-gray-500">Redirecting to your dashboard...</p>
     </div>
 </div>
 @endsection

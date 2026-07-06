@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Reset Password - ' . config('app.name', 'Laravel'))
+@section('title', 'Reset Password - ' . config('app.name', 'Zerixa Call Center - For Business'))
 
 @section('auth-image')
 <div class="auth-img-bg" style="background-image: url('{{ asset('images/callcenter/medium-shot-woman-working-call-center_23-2150454162.jpg') }}');"></div>
 <div class="auth-img-overlay"></div>
 
 <div class="auth-img-content flex flex-col justify-center items-center h-full p-12 xl:p-16 text-center">
-    <h1 class="text-3xl xl:text-4xl font-black text-white mb-6 animate__animated animate__fadeInDown">{{ config('app.name', 'CallCenter') }}</h1>
+    <h1 class="text-3xl xl:text-4xl font-black text-white mb-6 animate__animated animate__fadeInDown">{{ config('app.name', 'Zerixa Call Center') }}</h1>
     <h2 class="text-4xl xl:text-5xl font-black text-white leading-tight mb-4 animate__animated animate__fadeInUp animate__delay-1s">
         Set New Password
     </h2>
@@ -22,7 +22,7 @@
     <div class="auth-card bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
         {{-- Header --}}
         <div class="px-8 pt-8 pb-2 text-center">
-            <img src="{{ asset('logo.png') }}" alt="Logo" class="h-20 w-auto mx-auto mb-4 animate__animated animate__zoomIn">
+            <img src="{{ asset('images/logo/logo.png') }}" alt="Logo" class="h-20 w-auto mx-auto mb-4 animate__animated animate__zoomIn">
             <h2 class="text-2xl font-extrabold text-gray-800">Set New Password</h2>
             <p class="text-gray-400 text-sm mt-1">Choose a strong password for your account</p>
         </div>
@@ -60,7 +60,7 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                         </div>
                         <input id="password" type="password" name="password" required autocomplete="new-password" autofocus
-                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('password') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
+                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('password') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm"
                             placeholder="Min. 8 characters" oninput="checkPasswordStrength(this.value)">
                     </div>
                     <div id="passwordStrength" class="mt-2 flex items-center gap-2">
@@ -81,12 +81,12 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
                         <input id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password"
-                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
+                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm"
                             placeholder="Re-enter your password">
                     </div>
                 </div>
 
-                <button type="submit" class="w-full py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-gold-300 to-gold-400 hover:from-gold-400 hover:to-gold-500 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                <button type="submit" class="w-full py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     Reset Password
                 </button>
@@ -99,12 +99,12 @@
 
             <p class="text-center text-sm text-gray-500">
                 Remember your password?
-                <a href="{{ route('login') }}" class="font-semibold text-emerald-600 hover:text-emerald-700 transition-colors">Sign in</a>
+                <a href="{{ route('login') }}" class="font-semibold text-blue-600 hover:text-blue-700 transition-colors">Sign in</a>
             </p>
         </div>
     </div>
 
-    <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}</p>
+    <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Zerixa Call Center - For Business') }}</p>
 </div>
 
 <script>
@@ -120,7 +120,7 @@ function checkPasswordStrength(password) {
     if (strength <= 25) { bar.className = 'h-full w-0 transition-all duration-300 rounded-full bg-red-500'; label.textContent = 'Weak'; label.className = 'text-xs font-semibold text-red-500 w-20 text-right'; }
     else if (strength <= 50) { bar.className = 'h-full w-0 transition-all duration-300 rounded-full bg-amber-500'; label.textContent = 'Fair'; label.className = 'text-xs font-semibold text-amber-500 w-20 text-right'; }
     else if (strength <= 75) { bar.className = 'h-full w-0 transition-all duration-300 rounded-full bg-blue-500'; label.textContent = 'Good'; label.className = 'text-xs font-semibold text-blue-500 w-20 text-right'; }
-    else { bar.className = 'h-full w-0 transition-all duration-300 rounded-full bg-emerald-500'; label.textContent = 'Strong'; label.className = 'text-xs font-semibold text-emerald-500 w-20 text-right'; }
+    else { bar.className = 'h-full w-0 transition-all duration-300 rounded-full bg-blue-500'; label.textContent = 'Strong'; label.className = 'text-xs font-semibold text-blue-500 w-20 text-right'; }
 }
 </script>
 @endsection

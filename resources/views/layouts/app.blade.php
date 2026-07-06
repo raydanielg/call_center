@@ -25,7 +25,7 @@
         @keyframes checkDraw { from { stroke-dashoffset:30; } to { stroke-dashoffset:0; } }
         @keyframes ajaxProgress { 0% { background-position: 100% 0; } 100% { background-position: -100% 0; } }
         @keyframes btnSpin { to { transform: rotate(360deg); } }
-        .ajax-loader { position:fixed; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, #024938, #f9ac00, #024938); background-size: 200% 100%; animation: ajaxProgress 1s linear infinite; z-index:9999; display:none; }
+        .ajax-loader { position:fixed; top:0; left:0; right:0; height:3px; background: linear-gradient(90deg, #1d4ed8, #3b82f6, #1d4ed8); background-size: 200% 100%; animation: ajaxProgress 1s linear infinite; z-index:9999; display:none; }
         .btn-spinner { display:inline-block; width:18px; height:18px; border:2.5px solid rgba(255,255,255,0.4); border-top-color:#fff; border-radius:50%; animation: btnSpin 0.6s linear infinite; }
         .btn-spinner-dark { display:inline-block; width:18px; height:18px; border:2.5px solid rgba(0,0,0,0.2); border-top-color:#1f2937; border-radius:50%; animation: btnSpin 0.6s linear infinite; }
         .btn-loading { pointer-events:none; opacity:0.75; }
@@ -54,7 +54,7 @@
             margin: 0 12px 0 0 !important;
         }
         .swal2-toast-custom .swal2-timer-progress-bar {
-            background: linear-gradient(90deg, #047857, #f9ac00) !important;
+            background: linear-gradient(90deg, #1d4ed8, #3b82f6) !important;
             height: 3px !important;
         }
         .swal2-container {
@@ -103,10 +103,10 @@
             background-image: radial-gradient(rgba(255,255,255,0.04) 2px, transparent 2.5px) !important;
         }
         html.dark .auth-bg .auth-blob-1 {
-            background-color: rgba(4,73,56,0.3) !important;
+            background-color: rgba(29,78,216,0.3) !important;
         }
         html.dark .auth-bg .auth-blob-2 {
-            background-color: rgba(249,172,0,0.15) !important;
+            background-color: rgba(59,130,246,0.15) !important;
         }
 
         .auth-image-col {
@@ -126,7 +126,7 @@
         .auth-image-col .auth-img-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(2,73,56,0.85), rgba(4,120,87,0.7), rgba(6,95,70,0.85));
+            background: linear-gradient(135deg, rgba(29,78,216,0.85), rgba(37,99,235,0.7), rgba(30,64,175,0.85));
         }
         .auth-image-col .auth-img-content {
             position: relative;
@@ -152,8 +152,8 @@
             border-color: rgba(51,65,85,0.5) !important;
         }
         html.dark .auth-image-col .auth-feature-card span { color: #cbd5e1 !important; }
-        html.dark .auth-image-col .auth-feature-card svg { color: #34d399 !important; }
-        html.dark .auth-image-col .auth-stat-number { color: #f9ac00 !important; }
+        html.dark .auth-image-col .auth-feature-card svg { color: #60a5fa !important; }
+        html.dark .auth-image-col .auth-stat-number { color: #60a5fa !important; }
         html.dark .auth-image-col .auth-stat-label { color: #64748b !important; }
 
         html.dark .auth-card {
@@ -170,19 +170,19 @@
         }
         html.dark .auth-card input::placeholder { color: #475569 !important; }
         html.dark .auth-card input:focus {
-            border-color: #024938 !important;
-            box-shadow: 0 0 0 2px rgba(4,73,56,0.3) !important;
+            border-color: #1d4ed8 !important;
+            box-shadow: 0 0 0 2px rgba(29,78,216,0.3) !important;
         }
         html.dark .auth-card .auth-divider { border-color: #334155 !important; }
         html.dark .auth-card .auth-divider span { background-color: #1e293b !important; color: #475569 !important; }
-        html.dark .auth-card a { color: #34d399 !important; }
+        html.dark .auth-card a { color: #60a5fa !important; }
         html.dark .auth-card .auth-link { color: #64748b !important; }
-        html.dark .auth-card .auth-link:hover { color: #34d399 !important; }
+        html.dark .auth-card .auth-link:hover { color: #60a5fa !important; }
         html.dark .auth-card .auth-footer { color: #334155 !important; }
         html.dark .auth-card .auth-status-success {
-            background-color: rgba(4,73,56,0.15) !important;
-            border-color: rgba(4,73,56,0.3) !important;
-            color: #34d399 !important;
+            background-color: rgba(29,78,216,0.15) !important;
+            border-color: rgba(29,78,216,0.3) !important;
+            color: #60a5fa !important;
         }
         html.dark .auth-card .auth-status-error {
             background-color: rgba(127,29,29,0.15) !important;
@@ -198,8 +198,8 @@
             color: #e2e8f0 !important;
         }
         html.dark .auth-card .auth-code-input:focus {
-            border-color: #024938 !important;
-            box-shadow: 0 0 0 2px rgba(4,73,56,0.3) !important;
+            border-color: #1d4ed8 !important;
+            box-shadow: 0 0 0 2px rgba(29,78,216,0.3) !important;
         }
         html.dark .auth-card .auth-email-badge {
             background-color: #0f172a !important;
@@ -215,13 +215,13 @@
             background-color: #1e293b !important;
         }
         html.dark .auth-card .auth-step {
-            background-color: rgba(4,73,56,0.15) !important;
-            color: #34d399 !important;
+            background-color: rgba(29,78,216,0.15) !important;
+            color: #60a5fa !important;
         }
-        html.dark .auth-card .auth-decor-1 { background-color: rgba(4,73,56,0.2) !important; }
-        html.dark .auth-card .auth-decor-2 { background-color: rgba(4,73,56,0.1) !important; }
-        html.dark .auth-card .auth-decor-3 { background-color: rgba(249,172,0,0.15) !important; }
-        html.dark .auth-card .auth-decor-4 { background-color: rgba(249,172,0,0.1) !important; }
+        html.dark .auth-card .auth-decor-1 { background-color: rgba(29,78,216,0.2) !important; }
+        html.dark .auth-card .auth-decor-2 { background-color: rgba(29,78,216,0.1) !important; }
+        html.dark .auth-card .auth-decor-3 { background-color: rgba(59,130,246,0.15) !important; }
+        html.dark .auth-card .auth-decor-4 { background-color: rgba(59,130,246,0.1) !important; }
         html.dark .auth-card .auth-text-muted { color: #64748b !important; }
         html.dark .auth-card .auth-text-body { color: #94a3b8 !important; }
         html.dark .auth-card .text-gray-500 { color: #64748b !important; }
@@ -230,6 +230,37 @@
         html.dark .auth-card .bg-gray-50 { background-color: #0f172a !important; }
         html.dark .auth-card .border-gray-100 { border-color: #1e293b !important; }
         html.dark .auth-card .border-gray-200 { border-color: #334155 !important; }
+
+        html.dark img[alt="Logo"] {
+            filter: brightness(0) invert(1) !important;
+            opacity: 0.9;
+        }
+        html.dark .auth-image-col img[alt="Logo"] {
+            filter: brightness(0) invert(1) !important;
+            opacity: 1;
+        }
+
+        .auth-page-transition {
+            animation: authPageIn 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes authPageIn {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .auth-card-anim {
+            animation: authCardIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes authCardIn {
+            from { opacity: 0; transform: translateY(20px) scale(0.98); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+        .auth-image-anim {
+            animation: authImageIn 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes authImageIn {
+            from { opacity: 0; transform: scale(1.1); }
+            to { opacity: 1; transform: scale(1); }
+        }
 
         html.dark .auth-navbar {
             background-color: rgba(15,23,42,0.8) !important;
@@ -253,8 +284,8 @@
             theme: {
                 extend: {
                     colors: {
-                        emerald: { 50:'#e6f5f1',100:'#b3e0d4',200:'#80cbc0',300:'#4db5a8',400:'#1a9f8e',500:'#024938',600:'#023d30',700:'#013028',800:'#01241f',900:'#001816' },
-                        gold: { 50:'#fff5e0',100:'#ffe6b3',200:'#ffd680',300:'#ffc64d',400:'#ffb71a',500:'#f9ac00',600:'#d49700',700:'#b07c00',800:'#8c6100',900:'#684600' }
+                        emerald: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a' },
+                        gold: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a' }
                     }
                 }
             }
@@ -271,7 +302,7 @@
     {{-- Theme Toggle --}}
     <div class="theme-toggle" onclick="toggleTheme()">
         <svg class="moon-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1f2937" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg class="sun-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f9ac00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        <svg class="sun-icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     </div>
     <script>
     function toggleTheme() {
@@ -281,10 +312,10 @@
     </script>
 
     {{-- Auth Background --}}
-    <div class="auth-bg fixed inset-0 z-0 bg-gradient-to-br from-gray-50 via-white to-emerald-50">
-        <div class="auth-dot absolute inset-0" style="background-image: radial-gradient(rgba(2,73,56,0.07) 2px, transparent 2.5px); background-size: 18px 18px;"></div>
-        <div class="auth-blob-1 absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-emerald-200/40 rounded-full blur-3xl"></div>
-        <div class="auth-blob-2 absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-gold-200/40 rounded-full blur-3xl"></div>
+    <div class="auth-bg fixed inset-0 z-0 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+        <div class="auth-dot absolute inset-0" style="background-image: radial-gradient(rgba(29,78,216,0.07) 2px, transparent 2.5px); background-size: 18px 18px;"></div>
+        <div class="auth-blob-1 absolute top-[-10%] left-[-5%] w-[500px] h-[500px] bg-blue-200/40 rounded-full blur-3xl"></div>
+        <div class="auth-blob-2 absolute bottom-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-300/30 rounded-full blur-3xl"></div>
     </div>
 
     {{-- AJAX Progress Bar --}}
@@ -295,8 +326,8 @@
     <nav class="auth-navbar relative z-20 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <a href="{{ url('/') }}" class="flex items-center gap-2 text-emerald-700 font-bold text-lg">
-                    <img src="{{ asset('logo.png') }}" alt="Logo" class="h-8 w-auto">
+                <a href="{{ url('/') }}" class="flex items-center gap-2 text-blue-700 font-bold text-lg">
+                    <img src="{{ asset('images/logo/logo.png') }}" alt="Logo" class="h-8 w-auto">
                 </a>
                 <div class="flex items-center gap-4">
                     <span class="text-gray-600 text-sm font-medium">{{ Auth::user()->name }}</span>
@@ -363,20 +394,31 @@
         function hideLoader() { loader.style.display = 'none'; }
 
         function fadeOut(el, cb) {
-            el.style.transition = 'opacity 0.15s ease-out, transform 0.15s ease-out';
+            el.style.transition = 'opacity 0.25s ease-out, transform 0.25s ease-out';
             el.style.opacity = '0';
-            el.style.transform = 'translateY(-8px)';
-            setTimeout(cb, 150);
+            el.style.transform = 'translateX(-20px)';
+            setTimeout(cb, 250);
         }
 
         function fadeIn(el) {
             el.style.opacity = '0';
-            el.style.transform = 'translateY(12px)';
-            el.style.transition = 'opacity 0.35s cubic-bezier(0.16,1,0.3,1), transform 0.35s cubic-bezier(0.16,1,0.3,1)';
+            el.style.transform = 'translateX(20px)';
+            el.style.transition = 'opacity 0.4s cubic-bezier(0.16,1,0.3,1), transform 0.4s cubic-bezier(0.16,1,0.3,1)';
             requestAnimationFrame(() => {
                 el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
+                el.style.transform = 'translateX(0)';
             });
+            const card = el.querySelector('.auth-card');
+            if (card) {
+                card.classList.remove('animate__animated', 'animate__fadeInLeft', 'animate__faster');
+                card.classList.add('animate__animated', 'animate__fadeInRight', 'animate__faster');
+            }
+            const imgCol = el.querySelector('.auth-image-col');
+            if (imgCol) {
+                imgCol.classList.remove('auth-image-anim');
+                void imgCol.offsetWidth;
+                imgCol.classList.add('auth-image-anim');
+            }
         }
 
         function executeScripts(container) {

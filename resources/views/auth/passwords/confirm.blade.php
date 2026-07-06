@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Confirm Password - ' . config('app.name', 'Laravel'))
+@section('title', 'Confirm Password - ' . config('app.name', 'Zerixa Call Center - For Business'))
 
 @section('auth-image')
 <div class="auth-img-bg" style="background-image: url('{{ asset('images/callcenter/african-american-woman-works-call-center-operator-customer-service-agent-wearing-microphone-headsets-working-laptop_627829-606.jpg') }}');"></div>
 <div class="auth-img-overlay"></div>
 
 <div class="auth-img-content flex flex-col justify-center items-center h-full p-12 xl:p-16 text-center">
-    <h1 class="text-3xl xl:text-4xl font-black text-white mb-6 animate__animated animate__fadeInDown">{{ config('app.name', 'CallCenter') }}</h1>
+    <h1 class="text-3xl xl:text-4xl font-black text-white mb-6 animate__animated animate__fadeInDown">{{ config('app.name', 'Zerixa Call Center') }}</h1>
     <h2 class="text-4xl xl:text-5xl font-black text-white leading-tight mb-4 animate__animated animate__fadeInUp animate__delay-1s">
         Confirm Password
     </h2>
@@ -21,7 +21,7 @@
 <div class="w-full max-w-md animate__animated animate__fadeInLeft animate__faster">
     <div class="auth-card bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
         <div class="px-8 pt-8 pb-2 text-center">
-            <img src="{{ asset('logo.png') }}" alt="Logo" class="h-20 w-auto mx-auto mb-4 animate__animated animate__zoomIn">
+            <img src="{{ asset('images/logo/logo.png') }}" alt="Logo" class="h-20 w-auto mx-auto mb-4 animate__animated animate__zoomIn">
             <h2 class="text-2xl font-extrabold text-gray-800">Confirm Password</h2>
             <p class="text-gray-400 text-sm mt-1">Please confirm your password before continuing</p>
         </div>
@@ -41,7 +41,7 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                         </div>
                         <input id="password" type="password" name="password" required autocomplete="current-password" autofocus
-                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('password') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
+                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('password') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm"
                             placeholder="Enter your password">
                     </div>
                     @error('password')
@@ -49,7 +49,7 @@
                     @enderror
                 </div>
 
-                <button type="submit" class="w-full py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-gold-300 to-gold-400 hover:from-gold-400 hover:to-gold-500 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                <button type="submit" class="w-full py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     Confirm Password
                 </button>
@@ -57,12 +57,12 @@
 
             @if (Route::has('password.request'))
                 <div class="mt-5 text-center">
-                    <a href="{{ route('password.request') }}" class="text-sm font-medium text-emerald-600 hover:text-emerald-700 transition-colors">Forgot your password?</a>
+                    <a href="{{ route('password.request') }}" class="text-sm font-medium text-blue-600 hover:text-blue-700 transition-colors">Forgot your password?</a>
                 </div>
             @endif
         </div>
     </div>
 
-    <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}</p>
+    <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Zerixa Call Center - For Business') }}</p>
 </div>
 @endsection

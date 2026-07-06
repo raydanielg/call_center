@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Register - ' . config('app.name', 'Laravel'))
+@section('title', 'Register - ' . config('app.name', 'Zerixa Call Center - For Business'))
 
 @section('auth-image')
 <div class="auth-img-bg" style="background-image: url('{{ asset('images/callcenter/happy-call-center-worker-working-reduce-clients-complaints_482257-117934.jpg') }}');"></div>
 <div class="auth-img-overlay"></div>
 
 <div class="auth-img-content flex flex-col justify-center items-center h-full p-12 xl:p-16 text-center">
-    <h1 class="text-3xl xl:text-4xl font-black text-white mb-6 animate__animated animate__fadeInDown">{{ config('app.name', 'CallCenter') }}</h1>
+    <h1 class="text-3xl xl:text-4xl font-black text-white mb-6 animate__animated animate__fadeInDown">{{ config('app.name', 'Zerixa Call Center') }}</h1>
     <h2 class="text-4xl xl:text-5xl font-black text-white leading-tight mb-4 animate__animated animate__fadeInUp animate__delay-1s">
         Join Us Today
     </h2>
@@ -22,7 +22,7 @@
     <div class="auth-card bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
         {{-- Header --}}
         <div class="px-8 pt-8 pb-2 text-center">
-            <img src="{{ asset('logo.png') }}" alt="Logo" class="h-20 w-auto mx-auto mb-4 animate__animated animate__zoomIn">
+            <img src="{{ asset('images/logo/logo.png') }}" alt="Logo" class="h-20 w-auto mx-auto mb-4 animate__animated animate__zoomIn">
             <h2 class="text-2xl font-extrabold text-gray-800">Create Account</h2>
             <p class="text-gray-400 text-sm mt-1">Join us and get started today</p>
         </div>
@@ -41,7 +41,7 @@
                                 <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
                             </div>
                             <input id="first_name" type="text" name="first_name" value="{{ old('first_name') }}" required autocomplete="given-name" autofocus
-                                class="w-full pl-11 pr-3 py-2.5 rounded-lg border @error('first_name') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
+                                class="w-full pl-11 pr-3 py-2.5 rounded-lg border @error('first_name') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm"
                                 placeholder="John">
                         </div>
                         @error('first_name')
@@ -51,7 +51,7 @@
                     <div>
                         <label for="last_name" class="block text-sm font-semibold text-gray-700 mb-1.5">Last Name</label>
                         <input id="last_name" type="text" name="last_name" value="{{ old('last_name') }}" required autocomplete="family-name"
-                            class="w-full px-3 py-2.5 rounded-lg border @error('last_name') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
+                            class="w-full px-3 py-2.5 rounded-lg border @error('last_name') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm"
                             placeholder="Doe">
                         @error('last_name')
                             <p class="mt-1 text-xs text-red-600">{{ $message }}</p>
@@ -67,7 +67,7 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"/></svg>
                         </div>
                         <input id="email" type="email" name="email" value="{{ old('email') }}" required autocomplete="email"
-                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('email') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
+                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('email') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm"
                             placeholder="name@example.com">
                     </div>
                     @error('email')
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                         <input id="phone-display" type="tel" inputmode="numeric" autocomplete="tel"
-                            class="w-full pl-[92px] pr-4 py-2.5 rounded-lg border @error('phone') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm font-mono tracking-wide"
+                            class="w-full pl-[92px] pr-4 py-2.5 rounded-lg border @error('phone') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm font-mono tracking-wide"
                             placeholder="7XX XXX XXX" maxlength="9"
                             value="{{ old('phone') ? preg_replace('/^255/', '', old('phone')) : '' }}">
                     </div>
@@ -111,7 +111,7 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
                         </div>
                         <input id="password" type="password" name="password" required autocomplete="new-password" minlength="8"
-                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('password') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
+                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border @error('password') border-red-300 ring-2 ring-red-100 @else border-gray-200 @enderror focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm"
                             placeholder="Min. 8 characters">
                     </div>
                     @error('password')
@@ -127,13 +127,13 @@
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                         </div>
                         <input id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password"
-                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all text-sm"
+                            class="w-full pl-11 pr-4 py-2.5 rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-sm"
                             placeholder="Re-enter your password">
                     </div>
                 </div>
 
                 {{-- Submit --}}
-                <button type="submit" class="w-full py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-gold-300 to-gold-400 hover:from-gold-400 hover:to-gold-500 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                <button type="submit" class="w-full py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/></svg>
                     Create Account
                 </button>
@@ -148,12 +148,12 @@
             {{-- Login link --}}
             <p class="text-center text-sm text-gray-500">
                 Already have an account?
-                <a href="{{ route('login') }}" class="font-semibold text-emerald-600 hover:text-emerald-700 transition-colors">Sign in</a>
+                <a href="{{ route('login') }}" class="font-semibold text-blue-600 hover:text-blue-700 transition-colors">Sign in</a>
             </p>
         </div>
     </div>
 
-    <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}</p>
+    <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Zerixa Call Center - For Business') }}</p>
 </div>
 
 {{-- Phone Input Script --}}

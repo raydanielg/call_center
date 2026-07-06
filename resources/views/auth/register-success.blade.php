@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Registration Successful - ' . config('app.name', 'Laravel'))
+@section('title', 'Registration Successful - ' . config('app.name', 'Zerixa Call Center - For Business'))
 
 @section('auth-image')
 <div class="auth-img-bg" style="background-image: url('{{ asset('images/callcenter/jolly-call-center-professional-typing-pc-keyboard-assisting-customers_482257-125196.jpg') }}');"></div>
 <div class="auth-img-overlay"></div>
 
 <div class="auth-img-content flex flex-col justify-center items-center h-full p-12 xl:p-16 text-center">
-    <h1 class="text-3xl xl:text-4xl font-black text-white mb-6 animate__animated animate__fadeInDown">{{ config('app.name', 'CallCenter') }}</h1>
+    <h1 class="text-3xl xl:text-4xl font-black text-white mb-6 animate__animated animate__fadeInDown">{{ config('app.name', 'Zerixa Call Center') }}</h1>
     <h2 class="text-4xl xl:text-5xl font-black text-white leading-tight mb-4 animate__animated animate__fadeInUp animate__delay-1s">
         You're All Set!
     </h2>
@@ -22,14 +22,14 @@
     <div class="auth-card bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden text-center">
         {{-- Success Header --}}
         <div class="px-8 pt-8 pb-2 text-center relative overflow-hidden">
-            <div class="auth-decor-1 absolute top-2 left-4 w-2 h-2 rounded-full bg-emerald-100"></div>
-            <div class="auth-decor-2 absolute top-6 right-8 w-3 h-3 rounded-full bg-emerald-50"></div>
-            <div class="auth-decor-3 absolute bottom-4 left-10 w-2 h-2 rounded-full bg-gold-100"></div>
-            <div class="auth-decor-4 absolute top-10 right-4 w-1.5 h-1.5 rounded-full bg-gold-50"></div>
+            <div class="auth-decor-1 absolute top-2 left-4 w-2 h-2 rounded-full bg-blue-100"></div>
+            <div class="auth-decor-2 absolute top-6 right-8 w-3 h-3 rounded-full bg-blue-50"></div>
+            <div class="auth-decor-3 absolute bottom-4 left-10 w-2 h-2 rounded-full bg-blue-100"></div>
+            <div class="auth-decor-4 absolute top-10 right-4 w-1.5 h-1.5 rounded-full bg-blue-50"></div>
 
-            <img src="{{ asset('logo.png') }}" alt="Logo" class="h-20 w-auto mx-auto mb-4 animate__animated animate__zoomIn">
+            <img src="{{ asset('images/logo/logo.png') }}" alt="Logo" class="h-20 w-auto mx-auto mb-4 animate__animated animate__zoomIn">
             <h2 class="text-2xl font-extrabold text-gray-800">Account Created!</h2>
-            <p class="text-gray-400 text-sm mt-1">Welcome to {{ config('app.name', 'Laravel') }}</p>
+            <p class="text-gray-400 text-sm mt-1">Welcome to {{ config('app.name', 'Zerixa Call Center - For Business') }}</p>
         </div>
 
         {{-- Body --}}
@@ -48,12 +48,12 @@
                 {{-- Steps indicator --}}
                 <div class="flex items-center justify-center gap-3 py-2">
                     <div class="flex flex-col items-center gap-1">
-                        <div class="auth-step w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center">
-                            <svg class="w-4 h-4 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        <div class="auth-step w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
+                            <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                         </div>
                         <span class="text-[10px] text-gray-400">Register</span>
                     </div>
-                    <div class="w-8 h-0.5 bg-emerald-200 rounded-full"></div>
+                    <div class="w-8 h-0.5 bg-blue-200 rounded-full"></div>
                     <div class="flex flex-col items-center gap-1">
                         <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center">
                             <svg class="w-4 h-4 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
@@ -72,7 +72,7 @@
 
             {{-- Login Button --}}
             <div class="mt-8 space-y-3">
-                <a href="{{ route('login') }}" class="w-full py-3 text-sm font-bold text-white bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
+                <a href="{{ route('login') }}" class="w-full py-3 text-sm font-bold text-white bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-xl shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"/></svg>
                     Go to Login
                 </a>
@@ -85,6 +85,6 @@
         </div>
     </div>
 
-    <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}</p>
+    <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Zerixa Call Center - For Business') }}</p>
 </div>
 @endsection

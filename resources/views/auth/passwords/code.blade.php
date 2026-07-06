@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
-@section('title', 'Activation Code - ' . config('app.name', 'Laravel'))
+@section('title', 'Activation Code - ' . config('app.name', 'Zerixa Call Center - For Business'))
 
 @section('auth-image')
 <div class="auth-img-bg" style="background-image: url('{{ asset('images/callcenter/call-center-agent-tracking-shipments-office-looking-pc-screen_482257-117862.jpg') }}');"></div>
 <div class="auth-img-overlay"></div>
 
 <div class="auth-img-content flex flex-col justify-center items-center h-full p-12 xl:p-16 text-center">
-    <h1 class="text-3xl xl:text-4xl font-black text-white mb-6 animate__animated animate__fadeInDown">{{ config('app.name', 'CallCenter') }}</h1>
+    <h1 class="text-3xl xl:text-4xl font-black text-white mb-6 animate__animated animate__fadeInDown">{{ config('app.name', 'Zerixa Call Center') }}</h1>
     <h2 class="text-4xl xl:text-5xl font-black text-white leading-tight mb-4 animate__animated animate__fadeInUp animate__delay-1s">
         Enter The Code
     </h2>
@@ -22,7 +22,7 @@
     <div class="auth-card bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
         {{-- Header --}}
         <div class="px-8 pt-8 pb-2 text-center">
-            <img src="{{ asset('logo.png') }}" alt="Logo" class="h-20 w-auto mx-auto mb-4 animate__animated animate__zoomIn">
+            <img src="{{ asset('images/logo/logo.png') }}" alt="Logo" class="h-20 w-auto mx-auto mb-4 animate__animated animate__zoomIn">
             <h2 class="text-2xl font-extrabold text-gray-800">Enter Activation Code</h2>
             <p class="text-gray-400 text-sm mt-1">We sent a 6-digit code to your email</p>
         </div>
@@ -30,7 +30,7 @@
         {{-- Form --}}
         <div class="p-8 pt-6">
             @if (session('status'))
-                <div class="auth-status-success mb-5 p-4 rounded-lg bg-emerald-50 border border-emerald-200 text-sm text-emerald-700 flex items-center gap-2">
+                <div class="auth-status-success mb-5 p-4 rounded-lg bg-blue-50 border border-blue-200 text-sm text-blue-700 flex items-center gap-2">
                     <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
                     {{ session('status') }}
                 </div>
@@ -64,22 +64,22 @@
                     <label class="block text-sm font-semibold text-gray-700 mb-2 text-center">6-Digit Activation Code</label>
                     <div class="flex justify-center gap-2" id="codeInputs">
                         <input type="text" maxlength="1" inputmode="numeric" data-index="0"
-                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all">
+                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all">
                         <input type="text" maxlength="1" inputmode="numeric" data-index="1"
-                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all">
+                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all">
                         <input type="text" maxlength="1" inputmode="numeric" data-index="2"
-                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all">
+                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all">
                         <input type="text" maxlength="1" inputmode="numeric" data-index="3"
-                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all">
+                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all">
                         <input type="text" maxlength="1" inputmode="numeric" data-index="4"
-                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all">
+                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all">
                         <input type="text" maxlength="1" inputmode="numeric" data-index="5"
-                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 outline-none transition-all">
+                            class="auth-code-input code-input w-12 h-14 text-center text-xl font-bold rounded-lg border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all">
                     </div>
                     <input type="hidden" name="code" id="code-hidden">
                 </div>
 
-                <button type="submit" class="w-full py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-gold-300 to-gold-400 hover:from-gold-400 hover:to-gold-500 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                <button type="submit" class="w-full py-3 text-sm font-bold text-gray-900 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                     Verify Code
                 </button>
@@ -91,7 +91,7 @@
                 <form method="POST" action="{{ route('password.resend') }}" id="resendForm">
                     @csrf
                     <input type="hidden" name="email" value="{{ $email }}">
-                    <button type="submit" class="text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors">
+                    <button type="submit" class="text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors">
                         Resend Code
                     </button>
                 </form>
@@ -102,11 +102,11 @@
                 <div class="relative flex justify-center text-sm"><span class="px-3 bg-white text-gray-400">or</span></div>
             </div>
 
-            <a href="{{ route('password.request') }}" class="block text-center text-sm font-medium text-gray-500 hover:text-emerald-600 transition-colors">Use a different email</a>
+            <a href="{{ route('password.request') }}" class="block text-center text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors">Use a different email</a>
         </div>
     </div>
 
-    <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}</p>
+    <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Zerixa Call Center - For Business') }}</p>
 </div>
 
 <script>
