@@ -90,6 +90,73 @@
                 </button>
             </form>
 
+            {{-- Quick Demo Accounts --}}
+            <div class="mt-6 pt-6 border-t border-gray-100">
+                <p class="text-center text-xs font-semibold text-gray-400 uppercase tracking-wider mb-3">Quick Demo Accounts</p>
+                <div class="grid grid-cols-1 gap-2">
+                    <button type="button" onclick="quickLogin('admin@zerixacc.com', 'password')"
+                        class="w-full px-3 py-2 text-xs font-medium rounded-lg border border-gray-200 hover:border-red-300 hover:bg-red-50 transition-all flex items-center gap-2 text-gray-700">
+                        <span class="w-7 h-7 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-3.5 h-3.5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </span>
+                        <span class="text-left flex-1">
+                            <span class="block font-bold">Super Admin</span>
+                            <span class="block text-gray-400">Full system access</span>
+                        </span>
+                        <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+
+                    <button type="button" onclick="quickLogin('admin@salaama-telecom.com', 'password')"
+                        class="w-full px-3 py-2 text-xs font-medium rounded-lg border border-gray-200 hover:border-blue-300 hover:bg-blue-50 transition-all flex items-center gap-2 text-gray-700">
+                        <span class="w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-3.5 h-3.5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        </span>
+                        <span class="text-left flex-1">
+                            <span class="block font-bold">Company Admin</span>
+                            <span class="block text-gray-400">Salaama Telecom</span>
+                        </span>
+                        <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+
+                    <button type="button" onclick="quickLogin('supervisor@salaama-telecom.com', 'password')"
+                        class="w-full px-3 py-2 text-xs font-medium rounded-lg border border-gray-200 hover:border-amber-300 hover:bg-amber-50 transition-all flex items-center gap-2 text-gray-700">
+                        <span class="w-7 h-7 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5a4 4 0 11-8 0 4 4 0 018 0zm6 3a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </span>
+                        <span class="text-left flex-1">
+                            <span class="block font-bold">Supervisor</span>
+                            <span class="block text-gray-400">Salaama Telecom</span>
+                        </span>
+                        <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+
+                    <button type="button" onclick="quickLogin('amina.mwangaza@salaama-telecom.com', 'password')"
+                        class="w-full px-3 py-2 text-xs font-medium rounded-lg border border-gray-200 hover:border-green-300 hover:bg-green-50 transition-all flex items-center gap-2 text-gray-700">
+                        <span class="w-7 h-7 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-3.5 h-3.5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        </span>
+                        <span class="text-left flex-1">
+                            <span class="block font-bold">Agent</span>
+                            <span class="block text-gray-400">Amina Mwangaza</span>
+                        </span>
+                        <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+
+                    <button type="button" onclick="quickLogin('qa@salaama-telecom.com', 'password')"
+                        class="w-full px-3 py-2 text-xs font-medium rounded-lg border border-gray-200 hover:border-violet-300 hover:bg-violet-50 transition-all flex items-center gap-2 text-gray-700">
+                        <span class="w-7 h-7 rounded-full bg-violet-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-3.5 h-3.5 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+                        </span>
+                        <span class="text-left flex-1">
+                            <span class="block font-bold">QA Analyst</span>
+                            <span class="block text-gray-400">Salaama Telecom</span>
+                        </span>
+                        <svg class="w-4 h-4 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </button>
+                </div>
+                <p class="text-center text-xs text-gray-300 mt-3">Password for all accounts: <code class="text-gray-400 font-mono">password</code></p>
+            </div>
+
             @if (Route::has('register'))
                 <div class="auth-divider relative my-6">
                     <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-200"></div></div>
@@ -106,4 +173,12 @@
 
     <p class="auth-footer mt-6 text-center text-xs text-gray-300">&copy; {{ date('Y') }} {{ config('app.name', 'Zerixa Call Center - For Business') }}</p>
 </div>
+
+<script>
+function quickLogin(email, password) {
+    document.getElementById('email').value = email;
+    document.getElementById('password').value = password;
+    document.getElementById('loginBtn').click();
+}
+</script>
 @endsection

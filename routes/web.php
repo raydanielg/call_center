@@ -30,6 +30,16 @@ Route::middleware(['auth'])->group(function () {
     Route::put('/profile/password', [ProfileController::class, 'updatePassword'])->name('profile.password');
 });
 
+// Dialer Widget (Agent, Supervisor, Company Admin)
+Route::middleware(['auth', 'role:agent,supervisor,company_admin'])->prefix('dialer')->name('dialer.')->group(function () {
+    Route::get('/phone-status', [App\Http\Controllers\DialerController::class, 'phoneStatus'])->name('phone-status');
+    Route::post('/connect-phone', [App\Http\Controllers\DialerController::class, 'connectPhone'])->name('connect-phone');
+    Route::post('/disconnect-phone', [App\Http\Controllers\DialerController::class, 'disconnectPhone'])->name('disconnect-phone');
+    Route::get('/contacts', [App\Http\Controllers\DialerController::class, 'contacts'])->name('contacts');
+    Route::get('/dispositions', [App\Http\Controllers\DialerController::class, 'dispositions'])->name('dispositions');
+    Route::post('/log-call', [App\Http\Controllers\DialerController::class, 'logCall'])->name('log-call');
+});
+
 // Super Admin Routes
 Route::middleware(['auth', 'role:super_admin'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
@@ -68,7 +78,12 @@ Route::middleware(['auth', 'role:company_admin', 'subscription', 'tenant.active'
     Route::delete('/staff/{user}', [App\Http\Controllers\Company\StaffController::class, 'destroy'])->name('staff.destroy');
 
     Route::get('/calls', [App\Http\Controllers\Company\CallController::class, 'index'])->name('calls.index');
+    Route::get('/calls/create', [App\Http\Controllers\Company\CallController::class, 'create'])->name('calls.create');
+    Route::post('/calls', [App\Http\Controllers\Company\CallController::class, 'store'])->name('calls.store');
     Route::get('/calls/{call}', [App\Http\Controllers\Company\CallController::class, 'show'])->name('calls.show');
+    Route::get('/calls/{call}/edit', [App\Http\Controllers\Company\CallController::class, 'edit'])->name('calls.edit');
+    Route::put('/calls/{call}', [App\Http\Controllers\Company\CallController::class, 'update'])->name('calls.update');
+    Route::delete('/calls/{call}', [App\Http\Controllers\Company\CallController::class, 'destroy'])->name('calls.destroy');
 
     Route::get('/tickets', [App\Http\Controllers\Company\TicketController::class, 'index'])->name('tickets.index');
     Route::get('/tickets/create', [App\Http\Controllers\Company\TicketController::class, 'create'])->name('tickets.create');
@@ -140,7 +155,13 @@ Route::middleware(['auth', 'role:agent', 'subscription', 'tenant.active'])->pref
     Route::get('/dashboard', [App\Http\Controllers\Agent\DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/calls', [App\Http\Controllers\Agent\CallController::class, 'index'])->name('calls.index');
+    Route::post('/calls', [App\Http\Controllers\Agent\CallController::class, 'store'])->name('calls.store');
     Route::get('/calls/{call}', [App\Http\Controllers\Agent\CallController::class, 'show'])->name('calls.show');
+    Route::get('/calls/{call}/edit', [App\Http\Controllers\Agent\CallController::class, 'edit'])->name('calls.edit');
+    Route::put('/calls/{call}', [App\Http\Controllers\Agent\CallController::class, 'update'])->name('calls.update');
+    Route::delete('/calls/{call}', [App\Http\Controllers\Agent\CallController::class, 'destroy'])->name('calls.destroy');
+
+    Route::get('/dialer/contacts', [App\Http\Controllers\Agent\CallController::class, 'dialerContacts'])->name('dialer.contacts');
 
     Route::get('/tickets', [App\Http\Controllers\Agent\TicketController::class, 'index'])->name('tickets.index');
     Route::get('/tickets/{ticket}', [App\Http\Controllers\Agent\TicketController::class, 'show'])->name('tickets.show');

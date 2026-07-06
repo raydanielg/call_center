@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -51,6 +52,42 @@
         html.dark .dash-border { border-color: #334155 !important; }
         html.dark .dash-bg-subtle { background-color: #0f172a !important; }
         html.dark img[alt="Logo"] { filter: brightness(0) invert(1) !important; opacity: 0.9; }
+
+        /* ===== Dialer Widget ===== */
+        @keyframes dialerPulseRing {
+            0% { box-shadow: 0 0 0 0 rgba(37,99,235,0.55); }
+            70% { box-shadow: 0 0 0 18px rgba(37,99,235,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,99,235,0); }
+        }
+        @keyframes dialerRingingRing {
+            0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.6); }
+            70% { box-shadow: 0 0 0 22px rgba(34,197,94,0); }
+            100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+        }
+        .dialer-fab { animation: dialerPulseRing 2.4s infinite; }
+        .dialer-avatar-ringing { animation: dialerRingingRing 1.4s infinite; }
+        @keyframes dialerShake {
+            0%, 100% { transform: rotate(0deg); }
+            10%, 30% { transform: rotate(-12deg); }
+            20%, 40% { transform: rotate(12deg); }
+            50% { transform: rotate(-6deg); }
+            60% { transform: rotate(6deg); }
+            70%, 100% { transform: rotate(0deg); }
+        }
+        .dialer-shake { animation: dialerShake 0.9s infinite; }
+        @keyframes dialerBar {
+            0%, 100% { transform: scaleY(0.25); }
+            50% { transform: scaleY(1); }
+        }
+        .dialer-wave-bar { width: 4px; border-radius: 4px; background: linear-gradient(180deg,#60a5fa,#2563eb); transform-origin: center; animation: dialerBar 0.9s ease-in-out infinite; }
+        @keyframes dialerFadeUp { from { opacity:0; transform: translateY(24px) scale(0.96); } to { opacity:1; transform: translateY(0) scale(1); } }
+        .dialer-panel-enter { animation: dialerFadeUp 0.28s cubic-bezier(.16,1,.3,1) both; }
+        @keyframes dialerFadeIn { from { opacity:0; } to { opacity:1; } }
+        .dialer-backdrop-enter { animation: dialerFadeIn 0.2s ease both; }
+        .dialer-key { transition: all .12s ease; }
+        .dialer-key:active { transform: scale(0.9); background: rgba(37,99,235,0.15) !important; }
+        @keyframes dialerBlink { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+        .dialer-live-dot { animation: dialerBlink 1s infinite; }
     </style>
     <script>
         if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -144,6 +181,11 @@
         </main>
 
     </div>
+
+    {{-- Dialer Widget (Agents, Supervisors & Company Admins can place/receive calls) --}}
+    @if(Auth::check() && (Auth::user()->hasRole('agent') || Auth::user()->hasRole('supervisor') || Auth::user()->hasRole('company_admin')))
+        @include('partials.dialer')
+    @endif
 
     <script>
         function toggleSidebar() {
